@@ -57,7 +57,7 @@ def makeMove(s: Sturgeon):
             print("There are a lot of predators around.")
         if food <= 0.07:
             print("You are having a hard time finding food...")
-        x = input("Choose an action/n1) Find food/n2) Move towards food/n3) Move away from predators/n")
+        x = input("Choose an action\n1) Find food\n2) Move towards food\n3) Move away from predators\n")
     dangerRandom = random.random()
     foodRandom = random.random()
     if x == "1":
@@ -70,16 +70,17 @@ def makeMove(s: Sturgeon):
         else:
             food += 0.05
     else:
-        if foodRandom < 0.5:
+        if foodRandom < 0.6:
             food -= 0.1
     if x == "3":
         if dangerRandom > 0.3:
-            danger -= 0.1
+            danger -= 0.15
         else:
             danger -= 0.05
     else:
-        if dangerRandom < 0.5:
+        if dangerRandom < 0.6:
             danger += 0.05
+    print()
     s.calculateHealth(danger)
 
 
@@ -88,7 +89,7 @@ def main():
     while mySturgeon.getHealth() > 0:
         makeMove(mySturgeon)
         mySturgeon.incrementScore()
-    print("Your sturgeon died./nScore is " + mySturgeon.getScore())
+    print("Your sturgeon died./nScore is " + str(mySturgeon.getScore()))
 
 
 main()
