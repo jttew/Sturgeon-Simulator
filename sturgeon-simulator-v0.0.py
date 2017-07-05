@@ -91,6 +91,7 @@ def main():
         makeMove(mySturgeon)
         mySturgeon.incrementScore()
     print("Your sturgeon died./nScore is " + str(mySturgeon.getScore()))
+    input("Thank you for playing")
 
 
 main()
