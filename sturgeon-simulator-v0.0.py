@@ -4,7 +4,7 @@ import random
 class Sturgeon:
 
     score = 0
-    health = 100
+    health = 20
     satiation = 1
 
     def getScore(self):
@@ -85,7 +85,7 @@ def makeMove(s: Sturgeon):
 
 
 def main():
-    print("Welcome to Sturgeon Simulator\nYou are a sturgeon\nDon't die")
+    print("Welcome to Sturgeon Simulator\nYou are a sturgeon\nDon't die\n")
     mySturgeon = Sturgeon()
     while mySturgeon.getHealth() > 0:
         makeMove(mySturgeon)
