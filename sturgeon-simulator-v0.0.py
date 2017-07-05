@@ -85,6 +85,7 @@ def makeMove(s: Sturgeon):
 
 
 def main():
+    print("Welcome to Sturgeon Simulator\nYou are a sturgeon\nDon't die")
     mySturgeon = Sturgeon()
     while mySturgeon.getHealth() > 0:
         makeMove(mySturgeon)
