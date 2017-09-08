@@ -25,8 +25,9 @@ class Sturgeon:
         self.health -= 1
 
     def incrementHealth(self):
-        print("You feel healthier.")
-        self.health += 1
+        if self.health < 30:
+            print("You feel healthier.")
+            self.health += 1
 
     def incrementScore(self):
         self.score += 1
